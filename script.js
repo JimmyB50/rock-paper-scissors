@@ -24,27 +24,27 @@ if(getComputerChoice(1,3)===1){
 //Fonction qui compare le choix de l'utilisateur au choix généré de l'ordinateur
 function playRound() {
         if(playerSelection === computerSelection){ //En cas d'égalité
-            console.log("You both chose " + playerSelection + ". It's a tie.");
+            return("You both chose " + playerSelection + ". It's a tie.");
 
         //Cas où l'utilisateur gagne
         }else if (playerSelection === "rock" && computerSelection === "scissors"){
-            console.log("Rock beats scissors, you win.")
+            return("Rock beats scissors, you win.");
         }else if (playerSelection === "paper" && computerSelection === "rock"){
-            console.log("Paper beats rock, you win.");
+            return("Paper beats rock, you win.");
         }else if (playerSelection === "scissors" && computerSelection === "paper"){
-            console.log("Scissors beats paper, you win.");
+            return("Scissors beats paper, you win.");
         
         //Cas où l'ordinateur gagne
         }else if (playerSelection === "rock" && computerSelection === "paper"){
-            console.log("Paper beats rock, you lose.");
+            return("Paper beats rock, you lose.");
         }else if (playerSelection === "paper" && computerSelection === "scissors"){
-            console.log("Scissors beats paper, you lose.");
+            return("Scissors beats paper, you lose.");
         }else if(playerSelection === "scissors" && computerSelection === "Rock"){
-            console.log("Rock beats scissors, you lose.")
+            return("Rock beats scissors, you lose.");
 
         //Si aucune des comparaison ne fonctionne, c'est que l'utilisateur a entré une réponse invalide
         }else{
             alert("Wrong input, try again");
         }
     }
-playRound();
+console.log(playRound());
